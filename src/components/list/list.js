@@ -77,7 +77,7 @@ if(loading){
                           </Avatar>
                         </ListItemAvatar>
                         <ListItemText primary={`Salida desde ${item.ciudadsalida}, destino: ${item.ciudadllegada}`} secondary={`Fecha llegada: ${dia} a las: ${hora}`} />
-                        {item.estado==='entregado'||item.estado==='cancelado'?null:<Button color="secondary" variant="contained" >Cancelar Pedido</Button>}
+                        {item.estado==='entregado'||item.estado==='cancelado'?null:<Button color="secondary" variant="contained" onClick={()=>cancelOrder(item._id)}>Cancelar Pedido</Button>}
                       </ListItem>)
                     
                 })}

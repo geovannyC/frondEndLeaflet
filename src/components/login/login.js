@@ -148,6 +148,9 @@ export default function LoginMaterial(props) {
       }
     });
   };
+  const handleChangeOpenN = () =>{
+    setOpenN(openN?false:true)
+  }
   const loginForm =
     redirect === "login" ? (
       <div className={classes.paper}>
@@ -415,7 +418,7 @@ export default function LoginMaterial(props) {
        
         </Grid>
       </Grid>
-       {openN?(<Notification status={openN}/>):null}
+       {openN?(<Notification status={openN} eventOpenN={setOpenN(false)}/>):null}
     </>
   );
 }

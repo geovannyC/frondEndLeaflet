@@ -2,14 +2,15 @@ import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import NotListedLocationIcon from '@material-ui/icons/NotListedLocation';
+import LocationCityIcon from '@material-ui/icons/LocationCity';
+import ListIcon from '@material-ui/icons/List';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
-import MailIcon from '@material-ui/icons/Mail';
+import MarkunreadMailboxIcon from '@material-ui/icons/MarkunreadMailbox';
 import MenuIcon from '@material-ui/icons/Menu';
 import AirportShuttleIcon from '@material-ui/icons/AirportShuttle';
 const useStyles = makeStyles({
@@ -50,7 +51,7 @@ const listEvent = (item)=>{
       <List>
         <ListItem button onClick={()=>listEvent('zipcode')}> 
             <ListItemIcon>
-            <NotListedLocationIcon/>
+            <MarkunreadMailboxIcon/>
             </ListItemIcon>
             <ListItemText>
             Pedido por COP
@@ -58,7 +59,7 @@ const listEvent = (item)=>{
         </ListItem>
 <ListItem button onClick={()=>listEvent('bystate')}>
     <ListItemIcon>
-<MonetizationOnIcon/>
+<LocationCityIcon/>
     </ListItemIcon>
     <ListItemText>
     Pedido por Ciudad
@@ -66,7 +67,7 @@ const listEvent = (item)=>{
 </ListItem>
 <ListItem button onClick={()=>listEvent('list')}>
     <ListItemIcon>
-    <MonetizationOnIcon/>
+    <ListIcon/>
     </ListItemIcon>
     <ListItemText>
     Lista de pedidos

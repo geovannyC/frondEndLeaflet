@@ -40,7 +40,7 @@ if(props.status==="Creado exitosamente"){
     
           <Snackbar
             open={props.status}
-          
+            
             TransitionComponent={state.Transition}
            
             key={state.Transition.name}
@@ -56,12 +56,12 @@ if(props.status==="Creado exitosamente"){
         <div>
           <Snackbar
             open={props.status}
-      
+   
             TransitionComponent={state.Transition}
            
             key={state.Transition.name}
           >
-                 <Alert severity="error">Error</Alert>
+                 <Alert severity="error" >Error</Alert>
           </Snackbar>
         </div>
       );
